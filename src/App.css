@@ -1,38 +1,142 @@
-.App {
+:root {
+  --bat-green: #0f0;
+  --bat-bg: #000;
+  --scan-color: rgba(0, 255, 0, 0.1);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bat-bg);
+  color: var(--bat-green);
+  font-family: 'Courier New', Courier, monospace;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bat-terminal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+/* CRT Scanline Effect */
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.2) 50%,
+    rgba(0,0,0,0.2)
+  );
+  background-size: 100% 4px;
   pointer-events: none;
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.decrypt-btn {
+  background: transparent;
+  border: 2px solid var(--bat-green);
+  color: var(--bat-green);
+  padding: 15px 30px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.decrypt-btn:hover {
+  background: var(--bat-green);
+  color: var(--bat-bg);
+  box-shadow: 0 0 15px var(--bat-green);
 }
 
-.App-link {
-  color: #61dafb;
+.cinematic-player {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.code-box {
+  border: 1px solid var(--bat-green);
+  padding: 20px;
+  margin-top: 20px;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.9; }
+  50% { opacity: 1; }
+  100% { opacity: 0.9; }
+}
+
+.glitch-text {
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+
+.visual-novel-frame {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  cursor: pointer;
+}
+
+.character-sprite {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.dialogue-box {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 80%;
+  background: rgba(0, 20, 0, 0.9);
+  border: 2px solid var(--bat-green);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.character-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px var(--bat-green);
+}
+
+.character-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.continue-prompt {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  text-align: right;
+  margin-top: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
