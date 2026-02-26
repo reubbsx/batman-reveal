@@ -140,3 +140,43 @@ body, html {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
 }
+
+.reveal-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 20;
+}
+
+.system-boot {
+  animation: bootSequence 2s ease-out forwards;
+  opacity: 0;
+}
+
+.scramble-effect {
+  animation: decryptScramble 2.5s cubic-bezier(0.1, 0.7, 1.0, 0.1) forwards;
+  opacity: 0;
+  border-color: transparent;
+}
+
+.final-code {
+  font-size: 3rem;
+  letter-spacing: 8px;
+  text-shadow: 0 0 15px var(--bat-green);
+}
+
+@keyframes bootSequence {
+  0% { opacity: 0; transform: translateY(20px); filter: blur(5px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes decryptScramble {
+  0% { opacity: 0; transform: scale(0.8); }
+  20% { opacity: 1; border-color: var(--bat-green); filter: invert(100%); }
+  40% { transform: scale(1.1); filter: invert(0%); text-shadow: 0 0 50px red; color: white; }
+  60% { filter: invert(100%); text-shadow: none; color: var(--bat-green); }
+  80% { transform: scale(0.95); filter: invert(0%); }
+  100% { opacity: 1; transform: scale(1); border-color: var(--bat-green); }
+}

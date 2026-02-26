@@ -4,10 +4,11 @@ import './App.css';
 const LOCKER_CODE = "DORM-BOX-8921";
 
 const DIALOGUE_SEQUENCE = [
-  { character: "BATMAN", text: "The encrypted channel is secure.", sprite: "/63-638700_batman-the-animated-series.png" },
-  { character: "ROBIN", text: "I've bypassed the dorm security grid. The package is isolated.", sprite: "/robin-batman-nightwing-superhero-superhero-robin-png-picture-adfd21ac9551dcd80d63942004f37e10.png" },
-  { character: "BATMAN", text: "Good. Listen closely. We are transmitting the decryption key now.", sprite: "/batman-the-man-who-laughs-joker-internet-meme-batman-7e1b1dfeb20fc4a4ab87b1071ec7e9aa.png" }
-];
+  { character: "BATMAN", text: "Yes you might be wondering what this is , but its sort of early commemoration related to you, well assuming you're not here in august , so bruce wayne here has decided to pick suitable gifts for a goofy but an admirable to be dentist like yourself", sprite:process.env.PUBLIC_URL + "/63-638700_batman-the-animated-series.png" },
+  { character: "ROBIN", text: "thats out of the script ,wtf , its meant to be a birthday gift , try again bruce ~~ , I mean Batman", sprite:process.env.PUBLIC_URL + "/robin-batman-nightwing-superhero-superhero-robin-png-picture-adfd21ac9551dcd80d63942004f37e10.png" },
+  { character: "BATMAN", text: "Ahem okay okay , so thank you for being a peak buddy so far , and although your birthday might be something far off , id want to say happy 27th birthday in advance :))) ", sprite: process.env.PUBLIC_URL + "/batman-the-man-who-laughs-joker-internet-meme-batman-7e1b1dfeb20fc4a4ab87b1071ec7e9aa.png" },
+  { character: "ROBIN", text: "Anyways tell her whats up next , what do we do now , omg you suck", sprite:process.env.PUBLIC_URL + "/robin-batman-nightwing-superhero-superhero-robin-png-picture-adfd21ac9551dcd80d63942004f37e10.png" },
+{ character: "BATMAN", text: "Pipe tf down Robin , Anyways jit , you would have to head downstairs or wherever you are when you'd read this to the amazon locker with the code that is shown next when you click continue , and you will get your stuff, if theres any issues contact the big man himself you have his phone number too , have a good one", sprite:process.env.PUBLIC_URL + "/63-638700_batman-the-animated-series.png" }];
 
 function App() {
   const [status, setStatus] = useState('LOCKED'); 
@@ -52,15 +53,17 @@ function App() {
       )}
 
       {status === 'REVEALED' && (
-        <div className="center-frame">
-          <h1 className="success-text">DECRYPTION COMPLETE</h1>
-          <div className="code-box">
-            <h2>{LOCKER_CODE}</h2>
+        <div className="reveal-frame">
+          <h1 className="success-text system-boot">DECRYPTION COMPLETE</h1>
+          <div className="code-box scramble-effect">
+            <p>PACKAGE LOCATION ID:</p>
+            <h2 className="final-code">{LOCKER_CODE}</h2>
           </div>
+          <p className="footer-text system-boot">PROTOCOL TERMINATED</p>
         </div>
-      )}
+        )}
     </div>
   );
-}
+} 
 
 export default App;
