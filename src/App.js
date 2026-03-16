@@ -9,7 +9,7 @@ const DIALOGUE_SEQUENCE = [
   { character: "BATMAN", text: "Ahem okay okay , so thank you for being my friend so far(making you automatically one of the coolest people to walk on planet earth) , and although your birthday might be something far off , id want to say happy 27th birthday in advance :))) ", sprite: process.env.PUBLIC_URL + "/batman-the-man-who-laughs-joker-internet-meme-batman-7e1b1dfeb20fc4a4ab87b1071ec7e9aa.png" },
   { character: "ROBIN", text: "Anyways tell her whats up next , what do we do now , omg you suck", sprite:process.env.PUBLIC_URL + "/robin-batman-nightwing-superhero-superhero-robin-png-picture-adfd21ac9551dcd80d63942004f37e10.png" },
   { character: "BATMAN", text: "hush, Anyways jit , you would have to head downstairs  to the amazon locker with the code that is shown next , and you will get your stuff, if theres any issues let me know unc , have a good one", sprite:process.env.PUBLIC_URL + "/63-638700_batman-the-animated-series.png" }];
-
+ 
 function App() {
   const [status, setStatus] = useState('LOCKED'); 
   const [dialogueIndex, setDialogueIndex] = useState(0);
