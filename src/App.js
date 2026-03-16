@@ -4,7 +4,7 @@ import './App.css';
 const LOCKER_CODE = "DORM-BOX-8921";
 
 const DIALOGUE_SEQUENCE = [
-  { character: "BATMAN", text: "Yes you might be wondering what this is , but its sort of early commemoration related to you, well assuming you're not here in august , so bruce wayne here has decided to pick suitable gifts for a goofy but an admirable to be dentist like yourself", sprite:process.env.PUBLIC_URL + "/63-638700_batman-the-animated-series.png" },
+  { character: "BATMAN", text: "Yes you might be wondering what this is , but its sort of early commemoration related to you, well assuming you're not here in august , so bruce wayne here has decided to pick a suitable gift for you", sprite:process.env.PUBLIC_URL + "/63-638700_batman-the-animated-series.png" },
   { character: "ROBIN", text: "thats out of the script ,wtf , its meant to be a birthday gift , try again bruce ~~ , I mean Batman", sprite:process.env.PUBLIC_URL + "/robin-batman-nightwing-superhero-superhero-robin-png-picture-adfd21ac9551dcd80d63942004f37e10.png" },
   { character: "BATMAN", text: "Ahem okay okay , so thank you for being a peak buddy so far , and although your birthday might be something far off , id want to say happy 27th birthday in advance :))) ", sprite: process.env.PUBLIC_URL + "/batman-the-man-who-laughs-joker-internet-meme-batman-7e1b1dfeb20fc4a4ab87b1071ec7e9aa.png" },
   { character: "ROBIN", text: "Anyways tell her whats up next , what do we do now , omg you suck", sprite:process.env.PUBLIC_URL + "/robin-batman-nightwing-superhero-superhero-robin-png-picture-adfd21ac9551dcd80d63942004f37e10.png" },
