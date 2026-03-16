@@ -54,12 +54,11 @@ function App() {
 
       {status === 'REVEALED' && (
         <div className="reveal-frame">
-          <h1 className="success-text system-boot">DECRYPTION COMPLETE</h1>
+          <h1 className="success-text system-boot">HAPPY BIRTHDAY UNC</h1>
           <div className="code-box scramble-effect">
-            <p>PACKAGE LOCATION ID:</p>
+            <p>LOCKER CODE:</p>
             <h2 className="final-code">{LOCKER_CODE}</h2>
           </div>
-          <p className="footer-text system-boot">PROTOCOL TERMINATED</p>
         </div>
         )}
     </div>
