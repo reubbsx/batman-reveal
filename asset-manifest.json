@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/batman-reveal/static/css/main.16c90485.css",
-    "main.js": "/batman-reveal/static/js/main.0a61ee66.js",
+    "main.js": "/batman-reveal/static/js/main.80208d9b.js",
     "index.html": "/batman-reveal/index.html",
     "main.16c90485.css.map": "/batman-reveal/static/css/main.16c90485.css.map",
-    "main.0a61ee66.js.map": "/batman-reveal/static/js/main.0a61ee66.js.map"
+    "main.80208d9b.js.map": "/batman-reveal/static/js/main.80208d9b.js.map"
   },
   "entrypoints": [
     "static/css/main.16c90485.css",
-    "static/js/main.0a61ee66.js"
+    "static/js/main.80208d9b.js"
   ]
 }
