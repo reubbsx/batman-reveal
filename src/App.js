@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const LOCKER_CODE = "DORM-BOX-8921";
+const LOCKER_CODE = "Box number: 65, code:46965805 , Box number: 6 , code:08119254";
 
 const DIALOGUE_SEQUENCE = [
   { character: "BATMAN", text: "Yes you might be wondering what this is , but its sort of early commemoration related to you, well assuming you're not here in august , so me here has decided to pick something memorable for you", sprite:process.env.PUBLIC_URL + "/63-638700_batman-the-animated-series.png" },
   { character: "ROBIN", text: "thats out of the script ,wtf , its meant to be a birthday gift , try again bruce ~~ , I mean Batman", sprite:process.env.PUBLIC_URL + "/robin-batman-nightwing-superhero-superhero-robin-png-picture-adfd21ac9551dcd80d63942004f37e10.png" },
-  { character: "BATMAN", text: "Ahem okay okay , so thank you for being my friend so far(making you automatically one of the coolest people to walk on planet earth) , and although your birthday might be something far off , id want to say happy 27th birthday in advance :))) ", sprite: process.env.PUBLIC_URL + "/batman-the-man-who-laughs-joker-internet-meme-batman-7e1b1dfeb20fc4a4ab87b1071ec7e9aa.png" },
+  { character: "BATMAN", text: "Ahem okay okay , so thank you for being a sufferable friend so far(making you automatically one of the coolest people to walk on planet earth) , and although your birthday might be something far off , id want to say happy 27th birthday in advance :))) ", sprite: process.env.PUBLIC_URL + "/batman-the-man-who-laughs-joker-internet-meme-batman-7e1b1dfeb20fc4a4ab87b1071ec7e9aa.png" },
   { character: "ROBIN", text: "Anyways tell her whats up next , what do we do now , omg you suck", sprite:process.env.PUBLIC_URL + "/robin-batman-nightwing-superhero-superhero-robin-png-picture-adfd21ac9551dcd80d63942004f37e10.png" },
-  { character: "BATMAN", text: "hush, Anyways jit ,you would have to head downstairs  to the amazon locker with the code that is shown next , and you will get your stuff, if theres any issues let me know unc , have a good one", sprite:process.env.PUBLIC_URL + "/63-638700_batman-the-animated-series.png" }];
+  { character: "BATMAN", text: "hush, Anyways jit ,you would have to head downstairs  to the amazon locker with the code that is shown next , and you will get your stuff, if theres any issues let me know , have a good one", sprite:process.env.PUBLIC_URL + "/63-638700_batman-the-animated-series.png" }];
  
 function App() {
   const [status, setStatus] = useState('LOCKED'); 
